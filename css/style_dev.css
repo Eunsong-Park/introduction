@@ -1,0 +1,149 @@
+@keyframes move_arr {
+    0% {
+        top: 22%;
+    }
+    50% {
+        top: 23%;
+    }
+    to {
+        top: 22%;
+    }
+}
+/* 
+@keyframes move_darr {
+    0% {
+        bottom: 10%;
+    }
+    50% {
+        bottom: 15%;
+    }
+    to {
+        bottom: 10%;
+    }
+} */
+
+body, ul, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration-line: none;
+    color: white;
+}
+
+nav {
+    position: fixed; 
+    left: 50%; transform: translate(-50%, 0);
+    margin-top: 20px;
+    z-index: 1;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    padding-left: 0;
+}
+
+nav ul li {
+    margin: 20px;
+    list-style-type: none;
+}
+
+body {
+    background-color: #111;
+    color: white;
+    width: 100vw; height: 100vh;
+}
+
+.container_dev {
+    width: 100vw; height: 100vh;
+    overflow: auto;
+    scroll-snap-type: both mandatory;
+    /* 자식요소들을 가로축으로 정렬시키고 싶기 때문에 부모요소인 컨테이너에 flex박스를 적용한다 */
+    display: flex;
+
+    /* html 속성이 안먹어서 여기에 적용  */
+    scroll-behavior: smooth;
+}
+
+section {
+    width: 100vw; height: 200vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* flex shrink를 적용하지 말고 설정한 크기대로 유지하라 */
+    flex: none;
+    scroll-snap-align: center;
+
+    /* section 내에서 한번 더 세로방향으로 scroll snap을 적용하고 싶었으나 실패. item_head/detail이 제대로 한 화면에 나오지 않아 section height를 200vh로 설정함 */
+    scroll-snap-type: both mandatory;
+    overflow: auto;
+
+    /* flex box 하위 요소들 세로정렬 위함 */
+    flex-direction: column;
+    
+    /* 화살표 표시 고정위해 부모요소 relative */
+    position: relative;
+}
+
+.item_head, .item_detail {
+    width: 100vw; height:100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    scroll-snap-align: center;
+}
+
+.item_detail {
+    background-color: cadetblue;
+}
+
+.project_item:nth-child(1) {
+    background-color: rgb(20,20,20);
+}
+.project_item:nth-child(2) {
+    background-color: rgb(50,50,50);
+}
+.project_item:nth-child(3) {
+    background-color: rgb(80, 80, 80);
+}
+.project_item:nth-child(4) {
+    background-color:  rgb(100,100,100);
+}
+
+h1 {
+    font-size: 5em;
+}
+
+p {
+    font-size: 2em;
+}
+
+.a_arr {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.larr, .rarr {
+    font-size: 3.5em;
+    position: absolute;
+    animation: move_arr 1.5s;
+    animation-iteration-count: infinite;
+}
+
+/* .darr, .uarr {
+    font-size: 3.5em;
+    position: absolute;
+    animation: move_darr 1.5s;
+    animation-iteration-count: infinite;
+}  */
+
+.larr {
+    left: 20px;
+}
+
+.rarr {
+    right: 20px;
+}

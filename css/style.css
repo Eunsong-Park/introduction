@@ -1,0 +1,108 @@
+body {
+    /* body에 뷰포트 크기 100을 주는 이유는 브라우저 호환 때문 */
+    width: 100vw; height: 100vh;
+    margin: 0;
+}
+nav {
+    /* fixed position은 전체 css flow에서 벗어남. 이 경우 통상 중앙정렬 방법인 margin auto나 flex box에서 정렬이 적용되지 않는다. 따라서 위치값을 오른쪽으로 50%, 왼쪽으로 50% 이동하게 설정한다. */
+    position: fixed; 
+    left: 50%; transform: translate(-50%, 0);
+}
+nav > ul {
+    /* ul 아래 li 요소들 간 간격 조정을 위해 ul에 flex, space-between 설정 */
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    /* 왼쪽 패딩값 40px은 ul에 기본적으로 생기는 건가? 일단 0으로 설정 */
+    padding-left: 0;
+}
+nav ul li {
+    list-style-type: none;
+    /* 마진 값을 설정해놓으면 nav안에서 각 요소끼리 마진이 생겨서 창이 줄어도 그 이하로 붙지 않음. 창이 늘어나면 각 요소의 content 너비가 늘어남 */
+    margin: 20px;
+    /* display: inline-block; */
+    /* nav > ul 에서 플렉스 박스, justify-content를 사용하는 방법 외에 각 li 요소들을 인라인 블럭화 + 마진값 부여로 떨어뜨려 놓는 방법도 있음  */
+    /* 그럼에도 부모요소에서 플랙스 박스를 쓰는 이유는 화면의 너비가 줄면 각 li 요소가 줄바꿈이 되지 않고 각자 자리에서 컨텐츠가 내려오는 효과가 있기 때문 */
+}
+a {
+    text-decoration-line: none;
+    color: white;
+}
+nav a {
+    color: black;
+}
+
+/* 컨테이너 div는 body와 같은 전체 영역 */
+.container_home {
+    width: 100%; height: 100%;
+    /* scroll snap 효과를 위해서 컨테이너에 overflow는 꼭 넣어줘야 함 */
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+/* section 하나씩 페이지 하나를 의미
+보이는 화면 영역 하나씩 차지 */
+section {
+    scroll-snap-align: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    /* flex-direction을 column 방향으로 요소를 배치하고 공간을 띄움. 가운데 요소는 중앙에 오게됨. */
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+.first_line {
+    margin-bottom: 25px;
+}
+.second_line > .word:nth-child(1) {
+    margin-left: 50px;
+}     
+.second_line > .box {
+    width: 400px;
+    height: 1.6em;
+    background-color: black;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.keyword {
+    color: white;
+    margin: auto;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.keyword:hover {
+    transform: rotate(-5deg);    
+}
+.box:active {
+    transform: scale(0.97, 0.97);
+}
+.scroll_box {
+    font-size: 20px;
+    /* relative는 원래 흐름상 있어야 할 자리에서 조정이 필요할 때 사용 */
+    position: relative;
+    margin-bottom: 20px;
+    animation: move_down 1.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1.5s;
+}
+.blank_box {
+    /* scroll_box에서 아래 마진을 20px 잡아놔서 text-box가 그만큼 올라옴. 상단의 blank_box도 조절 필요. */
+    margin-top: 10px;
+}
+.item:nth-child(1) {
+    background-color: antiquewhite;
+}
+.item:nth-child(2) {
+    background-color: cadetblue; 
+}
+.item:nth-child(3) {
+    background-color: yellowgreen; 
+}
+.item:nth-child(4) {
+    background-color: rgb(209, 158, 91); 
+}
+.item:nth-child(5) {
+    background-color: rgb(42, 139, 192);
+}

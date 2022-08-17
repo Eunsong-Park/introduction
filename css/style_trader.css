@@ -1,0 +1,52 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration-line: none;
+    color: white;
+}
+
+nav {
+    position: fixed; 
+    left: 50%; transform: translate(-50%, 0);
+    margin-top: 20px;
+    z-index: 1;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    padding-left: 0;
+}
+
+nav ul li {
+    margin: 20px;
+    list-style-type: none;
+}
+
+body {
+    background-color: #111;
+    color: white;
+    width: 500px;
+}
+
+.map {
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#worldmap {
+    width: 80vw;
+    margin-top: 3%;
+}
+
+#construction {
+    width: 30%;
+    position: absolute;
+}

@@ -1,0 +1,110 @@
+@keyframes move_arr {
+    0% {
+        bottom: 42vh;
+    }
+    50% {
+        bottom: 44vh;
+    }
+    to {
+        bottom: 42vh;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, ul, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: white;
+    text-decoration-line: none;
+}
+
+nav {
+    position: fixed; 
+    left: 50%; transform: translate(-50%, 0);
+    margin-top: 20px;
+}
+nav > ul {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    padding-left: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 20px;
+}
+
+body {
+    background-color: #111;
+    color: #999;
+}
+
+.wrapper {
+    display: flex;
+    height: 98vh;
+    /* width & overflow-x 조절해서 가로축 아이템 늘리기  */
+    width: 800vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* 스크롤바 숨기기 ms */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* chrome, safari, opera */
+.pic::-webkit-scrollbar {
+    display: none;
+}
+
+.pic_item {
+    /* basis 값을 기본 너비로. 창 너비를 더 늘리면 최대 설정해놓은 basis 너비에서 안늘어나고 줄이면 비례해서 줄어듬 */
+    flex-basis: 500px;
+    /* shrink 0으로 하게 되면 hover 시 다른 요소들이 줄어들지 않고, 창 너비가 줄어들어도 기본 width를 유지 */
+    /* flex-shrink: 0; */
+    margin: 0 4px;
+    transition: all .3s;
+}
+
+.pic_item:hover {
+    flex-basis: 900px;
+    margin: 0 10px;
+}
+
+.pic_item img {
+    width: 100%;
+}
+
+.larr, .rarr {
+    font-size: 3.5em;
+    position: fixed;
+    animation: move_arr 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.a_arr {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.larr {
+    left: 20px;
+}
+
+.rarr {
+    right: 20px;
+}

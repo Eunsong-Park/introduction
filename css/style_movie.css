@@ -1,0 +1,142 @@
+@keyframes move_arr {
+    0% {
+        bottom: 42vh;
+    }
+    50% {
+        bottom: 44vh;
+    }
+    to {
+        bottom: 42vh;
+    }
+}
+
+/* 내부 링크 이동시 건너뛰지 않고 스크롤 시키듯이 이동할때 사용  */
+html {
+    scroll-behavior: smooth;
+}
+
+body, ul, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: white;
+    text-decoration-line: none;
+}
+
+nav {
+    position: fixed; 
+    left: 50%; transform: translate(-50%, 0);
+    margin-top: 20px;
+}
+nav > ul {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    padding-left: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 20px;
+}
+
+body {
+    background-color: #111;
+    color: #999;
+}
+
+.wrapper {
+    display: flex;
+    /* 100vh시 세로 스크롤 생겨서 아예 98로 잡음  */
+    height: 98vh;
+    /* width & overflow-x 조절해서 가로축 아이템 늘리기  */
+    width: 200vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* 스크롤바 숨기기 ms */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* chrome, safari, opera */
+.movie::-webkit-scrollbar {
+    display: none;
+}
+
+.movie-item {
+     /* basis 값을 기본 너비로. 창 너비를 더 늘리면 최대 설정해놓은 basis 너비에서 안늘어나고 줄이면 비례해서 줄어듬 */
+    flex-basis: 300px;
+    /* shrink 0으로 하게 되면 hover 시 다른 요소들이 줄어들지 않고, 창 너비가 줄어들어도 기본 width를 유지 */
+    /* flex-shrink: 0; */
+    margin: 0 10px;
+    transition: all .3s;
+}
+
+.movie-item:hover {
+    flex-basis: 400px;
+    margin: 0 20px;
+}
+
+.movie-item img {
+    width: 100%;
+}
+
+.poster-contents {
+    display: none;
+}
+
+/* 나중에 상세 정보까지 넣었을때 사용  */
+/* .poster {
+    position: relative;
+}
+
+.poster-contents {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+}
+
+.poster-contents h2 {
+    font-size: 25px;
+}
+
+.poster-contents h2 span {
+    display: block;
+    font-size: 18px;
+}
+
+.poster-contents p {
+    display: none;
+} */
+
+.larr, .rarr {
+    font-size: 3.5em;
+    position: fixed;
+    animation: move_arr 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.a_arr {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.larr {
+    left: 20px;
+}
+
+.rarr {
+    right: 20px;
+}
