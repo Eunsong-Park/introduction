@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="/img/favi/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favi/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favi/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favi/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favi/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favi/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favi/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favi/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favi/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favi/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favi/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favi/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favi/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favi/favicon-16x16.png">
+    <link rel="manifest" href="img/favi/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favi/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eunsong Park</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+@keyframes move_down {
+    /* 0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    to {
+        transform: rotate(0);
+    } */
+    0% {
+        bottom: 0px;
+    }
+    50% {
+        bottom: -10px;
+    }
+    to {
+        bottom: 0px;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">EUNSONG PARK</a></li>
+                <li><a href="./DEV.html">A WEB DEV.</a></li>
+                <li><a href="./AFRICA.html">AN AFRICA TRAVELLER</a></li>
+                <li><a href="./MOVIE.html">A MOVIE GOER</a></li>
+                <li><a href="./TRADER.html">AN INTERNATIONAL TRADER</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container_home">
+        <section class= "item">
+            <!-- flex box인 section 내에서 text_box를 중앙에 배치하고 scroll_box를 하단 가운데 배치하기 위해 section에 justify-content를 space-between로 주고 빈 박스요소를 하나 더 만들어서 공간을 중앙 상단 중단 하단으로 분할함 -->
+            <div class="blank_box"></div>
+            <!-- text_box는 텍스트를 묶어서 두 줄로 나타내기 위함 -->
+            <div class="text_box">
+                <div class="first_line">
+                    안녕하세요!
+                </div>
+                <div class="second_line">
+                    <span class="word">저는</span>
+                    <span class="box">
+                        <span class="keyword">
+                            <a href="./index.html">박은송</a>
+                        </span>
+                    </span>
+                    <span class="word">입니다.</span>
+                </div>
+            </div>
+            <div class="scroll_box">스크롤을 내려주세요 &#9660;</div>
+        </section>
+        <section class= "item">
+            <div class="blank_box"></div>
+            <div class="text_box">
+                <div class="first_line">
+                    안녕하세요!
+                </div>
+                <div class="second_line">
+                    <span class="word">저는</span>
+                    <span class="box">
+                        <span class="keyword">
+                            <a href="./DEV.html">웹 개발자</a>
+                        </span>
+                    </span>
+                    <span class="word">입니다.</span>
+                </div>
+            </div>
+            <div class="scroll_box">스크롤을 내려주세요 &#9660;</div>
+        </section>
+        <section class= "item">
+            <div class="blank_box"></div>
+            <div class="text_box">
+                <div class="first_line">
+                    안녕하세요!
+                </div>
+                <div class="second_line">
+                    <span class="word">저는</span>
+                    <span class="box">
+                        <span class="keyword">
+                            <a href="./AFRICA.html">아프리카 여행자</a>
+                        </span>
+                    </span>
+                    <span class="word">입니다.</span>
+                </div>
+            </div>
+            <div class="scroll_box">스크롤을 내려주세요 &#9660;</div>
+        </section>
+        <section class= "item">
+            <div class="blank_box"></div>
+            <div class="text_box">
+                <div class="first_line">
+                    안녕하세요!
+                </div>
+                <div class="second_line">
+                    <span class="word">저는</span>
+                    <span class="box">
+                        <span class="keyword">
+                            <a href="./MOVIE.html">영화 애호가</a>
+                        </span>
+                    </span>
+                    <span class="word">입니다.</span>
+                </div>
+            </div>
+            <div class="scroll_box">스크롤을 내려주세요 &#9660;</div>
+        </section>
+        <section class= "item">
+            <div class="blank_box"></div>
+            <div class="text_box">
+                <div class="first_line">
+                    안녕하세요!
+                </div>
+                <div class="second_line">
+                    <span class="word">저는</span>
+                    <span class="box">
+                        <span class="keyword">
+                            <a href="./TRADER.html">국제무역가</a>
+                        </span>
+                    </span>
+                    <span class="word">입니다.</span>
+                </div>
+            </div>
+            <div class="blank_box"></div>
+        </section>
+    </div>
+</body>
+</html>
+
