@@ -8,11 +8,13 @@ a {
     color: white;
 }
 
-nav {
+#navbar {
     position: fixed; 
     left: 50%; transform: translate(-50%, 0);
     margin-top: 20px;
     z-index: 1;
+    /* 네비바 숨기기 효과 */
+    transition: top 0.5s;
 }
 
 nav > ul {
@@ -30,10 +32,14 @@ nav ul li {
 body {
     background-color: #111;
     color: white;
-    width: 500px;
 }
 
-.map {
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.mapPage {
     width: 100vw;
     height: 100vh;
     display:flex;
@@ -46,7 +52,81 @@ body {
     margin-top: 3%;
 }
 
-#construction {
-    width: 30%;
-    position: absolute;
+/* 새로운 시도  */
+.textSection {
+    padding: 50px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60%;
+}
+
+h3 {
+    font-size: 100px;
+    text-align: center;
+}
+
+p {
+    font-size: 30px;
+}
+
+#traderTextSection {
+    flex-direction: column;
+}
+
+#traderTextSectionWrapper {
+    margin-left: 0;
+    width: 100%;
+    padding: 10%;
+    padding-top: 80px;
+}
+
+#traderText {
+    margin: 0;
+}
+
+#p2020 {
+    text-indent: 170px;
+}
+
+.mapPage, .morocco, .southAfrica, .ghana, .mauritius, .egypt, .sriLanka, .poland, .thailand {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(42, 139, 192);
+    background-size: cover;
+    min-height: 60%;    
+    background-attachment: fixed;
+}
+
+.morocco {
+    background-image:url("../img/trader/morocco.jpeg");
+}
+
+.southAfrica {
+    background-image:url("../img/trader/sa.jpeg");
+}
+
+.ghana {
+    background-image:url("../img/trader/ghana.jpeg");
+}
+
+.mauritius {
+    background-image:url("../img/trader/mauritius.jpeg");
+}
+
+.egypt {
+    background-image:url("../img/trader/egypt.webp");
+}
+
+.sriLanka {
+    background-image:url("../img/trader/sri.jpeg");
+}
+
+.poland {
+    background-image:url("../img/trader/poland.jpeg");
+}
+
+.thailand {
+    background-image:url("../img/trader/thai.jpeg");
 }

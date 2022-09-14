@@ -64,7 +64,7 @@ body {
     /* 자식요소들을 가로축으로 정렬시키고 싶기 때문에 부모요소인 컨테이너에 flex박스를 적용한다 */
     display: flex;
 
-    /* html 속성이 안먹어서 여기에 적용  */
+    /* html태그에서 이 속성이 안먹어서 여기에 적용  */
     scroll-behavior: smooth;
 }
 
@@ -78,7 +78,7 @@ section {
     scroll-snap-align: center;
 
     /* section 내에서 한번 더 세로방향으로 scroll snap을 적용하고 싶었으나 실패. item_head/detail이 제대로 한 화면에 나오지 않아 section height를 200vh로 설정함 */
-    scroll-snap-type: both mandatory;
+    scroll-snap-type: y mandatory;
     overflow: auto;
 
     /* flex box 하위 요소들 세로정렬 위함 */

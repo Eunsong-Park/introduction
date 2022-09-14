@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  color: white;
+  font-size: 100px;
+}
+
+.projectWrapper {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+}
+
+.projectHead {
+  background-color: black;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+.projectDetail {
+  background-color: gray;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: center;
+}
